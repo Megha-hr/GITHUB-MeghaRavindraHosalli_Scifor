@@ -1,1 +1,123 @@
+Ans 1: CSS is Cascading Style Sheet.it is used to give style to webpage.
+Selectors are:
+1. tag/type selector:these selectors are used to design the element by applying style.
+    eg:h1,p,body etc
+2. Class selector:These selectors used to style the group of elments in the webpage.
+    eg:.inbox_button(name of your choice) 
+    <style>
+    .inbox_button{
+    margin:10px;
+    padding:10px
+    }
+    </style>
+    <html>
+    <head>
+    <title>aa</title>
+    </head>
+    <body>
+       <input class="input_button" type="text"/>
+   </body>
+   </html>
+  3.ID selector:these selectors are used to style unique element in webpage.
+  eg:inbox_button(name of your choice) 
+    <style>
+    #inbox_button{
+    margin:10px;
+    padding:10px
+    }
+    </style>
+    <html>
+    <head>
+    <title>aa</title>
+    </head>
+    <body>
+       <input id="input_button" type="text"/>
+   </body>
+   </html>
+   4.customised selector:These selectors are used to combine  multiple tags by , and apply style.
+   eg:h1,h2,p{
+   color:red;
+   }
+   
+Ans 2   :CSS box model is every element in HTML page has model using this model we can calculate dimention and space between elements .
+        content:it is content of a element in webpage
+        padding:it is area around the content
+        boarder:It is area around padding and content.
+        margin:it is area around boarder and it is used to manage the space between elements in page.
 
+Ans 3:
+        <html>
+        <head>
+        <title></title>
+        </head>
+        <body>
+        first_name:<input type="text" name="Firstname" value="aaaa" /> <br/>
+         Middle_name:<input type="text" name="Middlename" value="bbbb" /> <br/>
+          Last_name:<input type="text" name="lastname" value="cccc" /> <br/>
+          <selector>
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>EEE</option>
+          </selector><br/>
+         Male: <input type="radio" name="gender" />
+         Female:<input type="radio" name="Female" />
+         <br/>
+         <input type="submit"  />
+         <input type="reset" />
+         </body>
+         </html>
+
+
+ Ans 4:List types in html
+ 1.ordered list
+ 2.unordered list
+ 3.descriptive list
+
+ 1.ordered list:It is used to list the items with numbering.
+
+   
+        <html>
+        <head>
+        <title></title>
+        </head>
+        <body>
+        <ol>
+        <li>baleno</li>
+        <li>sujuki</li>
+        </ol>
+        </body>
+        </html>
+        
+ 2.unordered list: It is  used to list the items without numbering.
+         <html>
+        <head>
+        <title></title>
+        </head>
+        <body>
+        <ul>
+        <li>baleno</li>
+        <li>sujuki</li>
+        </ul>
+        </body>
+        </html>
+  3.descriptive list:it is used to list  terms  which need description of terms
+       <html>
+        <head>
+        <title></title>
+        </head>
+        <body>
+          <dl>
+          <dt>HTML</dt>
+          <dd>HYPER TEXT MARKUP LANGUAGE</dd>
+          <dt>CSS</dt>
+          <dd>CASCADING STYLE SHEET</dd>
+        </dl>
+        </body>
+        </html>
+ 
+          
+          
+        
+        
+
+   
