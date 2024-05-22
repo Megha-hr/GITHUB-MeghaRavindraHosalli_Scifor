@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <style>
+        input:valid{
+            border-color: green;
+        }
+        input:invalid{
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="username">username</label>
+        <input type="text" name="uname" id="uname" minlength="4" maxlength="8" required><br>
+        <label for="Email">Email</label>
+        <input type="email" rquired><br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="passsword" minlength="8"><br>
+        <label for="age">age</label>
+        <input type="number" name="age" id="age" min="18" max="100" required><br>
+        <label for="zipcode">Zipcode</label>
+        <input type="text" id="zip" name="zip" pattern="\d{5}" required><br><br>
+        <input type="submit">
+
+    </form>
+</body>
+</html>
