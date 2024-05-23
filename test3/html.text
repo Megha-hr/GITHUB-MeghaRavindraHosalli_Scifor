@@ -1,1 +1,63 @@
+Ans1:
+<strong>:It makes text bolder
+<small>:It makes text small in size
+<b>:it makes bold
+<i>:italic text
+<em>: emphasize the text
+<mark>:It helights the text
+<u>:For underlining to text or paragraph
+<sub>:subscript the text
+<sup>:superscript the text
+
+ans 2:we can merge two rows and colums by using attribute rowspan and colspan
+rowspan for collapsing  columns
+colspan for collapsing rows
+<html>
+<head>
+<title>
+collapsing
+</title>
+</head>
+<body>
+<table>
+<tr>
+<td colspan="2">row collapse for 2 cell</td>
+<td>aaa</td>
+<td>bbb</td>
+</tr>
+<tr>
+<td row="2"> column collapsed for 2 cell</td>
+<td> aaaa</td>
+<td>bbbb</td>
+</tr>
+<tr>
+<td>last row</td>
+<td>last</td>
+<td>row</td>
+</tr>
+</table>
+</body>
+</html>
+
+ans 3:cellspacing is used to give the space between text in cell and border of the cell
+cellpadding is used for distancing the cells in the tables.
+
+ans 4:Semantic tags describes the purpose of the tag.using this tag itself we can know what is this section.
+ex:<header>,<footer>,<img>
+
+ans 5:
+<html>
+<head>
+<title>
+image background
+</title>
+</head>
+<body style="background-img:url("aa.jpg)">
+<h1>online store </h1>
+</body>
+</html>
+
+ans 6:It is used in image tag, it is alternative to the image url . 
+
+
 
