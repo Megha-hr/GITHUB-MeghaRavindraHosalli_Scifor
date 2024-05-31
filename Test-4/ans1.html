@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flexbox</title>
+    <style>
+        .container{
+            display:flex;
+            flex-direction: column;
+            justify-content:space-around;
+            gap:5px;
+            border:1px solid black;
+          
+            height:100px;
+         
+  }
+         .Searchbar{
+            width: 100px;
+            height:50px;
+            border:1px solid black;
+            flex-basis:200px;
+            flex-grow:1 ;
+            align-self: flex-start;
+             }
+        .item{
+            padding: 20px;
+            flex-basis:20px;
+            flex-grow:1;
+            align-self: center;
+        
+
+        }
+
+        .image{
+            flex-basis:50px;
+            border: 1px solid black;
+            border-radius: 25px;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="Searchbar">Search</div>
+       <nav class="item">
+        <ul >
+            <li> <a href="#">home</a></li>
+            <li > <a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+           <li><a href="#">Address</a></li> 
+           </ul>
+             </nav>
+             <div class="image">
+                <img src="" alt="">
+             </div>
+           
+    
+    </div>
+    <footer>
+        <p>copyright @ 2024</p>
+    </footer>
+    
+</body>
+</html>
