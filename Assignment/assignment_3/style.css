@@ -1,0 +1,102 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    background:url("images/image.jpg")no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width:400px;
+    height:500px;
+    margin-top: 50px;
+    color: black;
+    background-color:  rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    border-radius: 10px;
+    padding: 20px 50px;
+}
+ label{
+    font-weight:500px;
+     display: block;
+    margin-top: 10px;
+}
+
+input{
+    width:100%;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-top:5px;
+    border: 1px;
+}
+
+button{
+    background-color: #030804;
+    color: white;
+    padding:10px 10px;
+    width:100%;
+    border-radius: 5px;
+    font-size: medium;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+
+.formheading{
+    text-align: center;
+}
+.formheading h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.subcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subcontainer input{
+    width:20px;
+
+    
+}
+
+.subcontainer p{
+    font-size: 16px;
+    margin-top: 30px;
+}
+.subcontainer a:link{
+    text-decoration: none;
+}
+
+.signup{
+    text-align: center;
+    padding-right: 5px;
+}
+
+.signup a:link{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    form{
+      width: 500px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    form{
+      width:300px ;
+    }
+  }
