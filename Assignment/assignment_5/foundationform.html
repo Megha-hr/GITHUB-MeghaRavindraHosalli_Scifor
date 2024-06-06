@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Form</title>
+    <!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+
+
+
+</head>
+<body>  
+    <h1 style="color:green" class="text-center">Signup Form</h1> 
+    <h3 class="text-center">Fill your details here</h3>       
+<form>
+    <div class="grid-container  ">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="large-7 cell">
+          <label>username
+            <input type="text" placeholder="Username" minlength="8">
+          </label>
+        </div>
+        <div class="large-7 cell">
+          <label>Email
+            <input type="Email" placeholder="Email" required>
+          </label>
+        </div>
+        <div class="large-7 cell">
+            <label>Password
+              <input type="password" placeholder="password" minlength="8">
+            </label>
+          </div>
+          <div class="grid-x grid-padding-x align-justify">
+          <fieldset class="cell large-5 ">
+            <legend>Choose Your Favorite</legend>
+            <input type="radio" name="gender" value="Male" id="pokemonRed" required><label for="Male">Male</label>
+            <input type="radio" name="gender" value="female" id="pokemonBlue"><label for="female">Female</label>
+            <input type="radio" name="gender" value="others" id="pokemonYellow"><label for="others">others</label>
+          </fieldset>
+          <fieldset class="cell large-7 align-justify ">
+            <legend>Check these out</legend>
+            <input id="checkbox1" type="checkbox"><label for="checkbox1">Dance</label>
+            <input id="checkbox2" type="checkbox"><label for="checkbox2">Singing</label>
+            <input id="checkbox3" type="checkbox"><label for="checkbox3">Poetry</label>
+          </fieldset>
+          <a class="button large" href="#">Submit</a>
+        </div>
+      </div>
+    </div>
+    
+  </form>
+  
+  
+</body>
+</html>
