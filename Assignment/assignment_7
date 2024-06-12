@@ -10,6 +10,8 @@
         let name="Ragavi";
         let age=20;
         let isStudent = true; 
+document.write("name is"+name);
+document.write("age is"+age);
 
 if (isStudent) {
   document.write("You are a student!");
