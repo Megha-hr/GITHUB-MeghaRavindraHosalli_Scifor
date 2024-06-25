@@ -9,30 +9,40 @@
     <script>
         var input_1 =parseFloat(prompt('Enter first number: '));
         var input_2 =parseFloat(prompt('Enter first number: '));
-        var operation = prompt("Enter operations a.addition b.subtraction c.divition d.multiplication")
-       
-        function calculator(input_1,input_2){
+        var operation = prompt("Enter operations +.addition -.subtraction /.divition *.multiplication")
+        function addition(a,b){
+                var result=input_1+input_2;
+               document.write("result"+result);
+        }
+        function subtraction(a,b){
+                var result=input_1+input_2;
+                document.write("result"+result);
+            }
+            function multiplication(a,b){
+                var result=input_1*input_2;
+                document.write("result"+result);
+            }
+
+            function divition(a,b){
+                var result=input_1/input_2;
+                document.write("result"+result);
+            }
             switch(operation){
-            case "+":
-              var result=input_1+input_2;
-               return result;
-            
-                break;
-            case "-":var result=input_1+input_2;
-               return result;
+            case "+":addition(input_1,input_2);
+            break;
 
-               case "*":var result=input_1*input_2;
-               return result;
-
-               case "/":var result=input_1/input_2;
-               return result;
+            case "-":subtraction(input_1,input_2);
+            break;
+            case "*":multiplication(input_1,input_2)
+            break;
+            case "/":divition(input_1,input_2);
                 
             default:document.write("enter correct operation");
         }
     
     
-    }
-    alert(calculator(input_1,input_2));
+    
+   
 
     </script>
 </body>
