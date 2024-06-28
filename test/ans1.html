@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans_1</title>
+</head>
+<body>
+    <script>
+        var d= new Date();
+        function getnsetDate(obj){
+            document.write("current month  is  "+" "+(obj.getMonth()+1));
+            document.write("<br/>");
+            document.write("next month is  "+ (obj.setMonth(6,28)));
+            document.write("<br/>");
+            document.write("set date to 15 of this month  "+ obj.setDate(15));
+            document.write("<br/>");
+            document.write("full year of adjusted object is  "+obj.getFullYear());
+        }
+        getnsetDate(d);
+    </script>
+</body>
+</html>
