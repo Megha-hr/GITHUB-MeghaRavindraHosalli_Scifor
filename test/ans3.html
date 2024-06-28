@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans_3</title>
+</head>
+<body>
+    <script>
+        var string=['s','t','r','i','n','g','s'];
+        function REVERSEANDSORTARRAY(str){
+            str.reverse()
+            document.write("reversed string"+str);
+            document.write("<br/>");
+            var sarr=str.sort();
+            document.write("sorted alphabetically method "+sarr);
+            document.write("<br/>");
+            return sarr;
+           }
+        var sorted=REVERSEANDSORTARRAY(string);
+      document.write("returnerd array",+sorted);
+    </script>
+</body>
+</html>
