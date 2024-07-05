@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.btn{
+    padding:10px 20px;
+    color:white;
+    background-color: royalblue;
+    border: none;
+    margin:20px 10px;
+}
+
+#respond{
+    margin:10px 20px;
+    text-align: center;
+}
