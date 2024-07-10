@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>// to prepare the component
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>// to render the component inside thre browser
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>// compile the content return by component
+</head>
+<body>
+<!-- create a elememt with id root-->
+  <p id="root"></p>
+<script type="text/babel">
+  //creating Student component by class component type
+    class Student extends React.Component {
+        render() {
+          return <h2>Hi, I am a student!</h2>;
+        }
+      }
+//accessing root element for rendering
+      const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<Student />);
+</script>
+</body>
+</html>
