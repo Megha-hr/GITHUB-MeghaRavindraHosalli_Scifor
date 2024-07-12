@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans2</title>
+</head>
+<body>
+    <!--CREATE A CLASS COMPONENT THAT RENDERS A HEADING AND A PARAGRAPH WITH SOME INLINE STYLING-->
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    <script type="text/babel">
+        class Example extends React.Component{
+            render(){
+                return <>
+                <h1 style={{color:"blue"}}>Hi welcome to the Metascifor</h1>
+                <p style={{color:"red",fontSize:"20px"}}>This company is best Company.they provide training + internship.</p>
+                </>
+            }
+        }
+        ReactDOM.render(<Example />,document.getElementById("root"))
+
+    </script>
+</body>
+</html>

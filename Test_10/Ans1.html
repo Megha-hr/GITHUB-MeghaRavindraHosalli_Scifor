@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans1</title>
+</head>
+<body>
+    <!--1.CREATE A FUNCTIONAL COMPONENT USERDETAILS THAT ACCEPTS PROPS AND RENDERS NAME: [PROPS.NAME], AGE: [PROPS.AGE],EMAIL:[PROPS.EMAIL],MOBILENO:[PROPS.MOBILENO] CITY: [PROPS.CITY].
+-->
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    <script type="text/babel">
+        function Userdetails(props){
+            return <>
+            <p>Name of User :  {props.name}</p>
+            <p>Age of User :  {props.age}</p>
+            <p>Email of User : {props.email}</p>
+            <p>Mobile Number : {props.MobileNo}</p>
+            <p>city of User :{props.city}</p>
+            </>
+        }
+
+        function Parentcomponent(){
+            return <>
+            <Userdetails 
+            name="Rajesh" 
+            age="50"
+            email="rajesh@gmail.com"
+            MobileNo="123456789"
+            city="Mumbai"
+             />
+            </>
+        }
+        ReactDOM.render(<Parentcomponent />,document.getElementById("root"))
+    </script>
+</body>
+</html>
