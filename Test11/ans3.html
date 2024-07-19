@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans1</title>
+</head>
+<body>
+  <!--WRITE A COMPONENT THAT FETCHES AND DISPLAYS A LIST OF USERS FROM AN API WHEN THE COMPONENT MOUNTS USING THE USEEFFECT HOOK
+-->
+    <div id="root"></div>
+    <!-- to prepare the component-->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- to render the component inside thre browser-->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!--compile the content return by component-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function Fetch(){
+        const {useEffect, useState}=React;
+        const [data,printData]=useState(null);
+        //fetching data from fetch function using useEffect
+        useEffect(() => {
+        fetch('https://random-data-api.com/api/users/random_user')
+            .then(response => response.json())
+            .then(data => setUserData(data));
+    }, []);
+    return(
+      <div>
+        <p>
+            Name:
+            {data.first_name}
+             {data.last_name}         
+             </p>
+        </div>
+    )
+  }
+  const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Fetch />);
+ 
+    </script>
+</body>
+</html>
