@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <!--.CREATE A COUNTER COMPONENT WITH A BUTTON THAT INCREMENTS THE COUNT BY 1 EACH TIME IT IS CLICKED EXTEND THE COMPONENT TO INCLUDE A SECOND BUTTON THAT DECREMENTS THE COUNT BY 1.
+-->
+    <div id="root"></div>
+     <!-- to prepare the component-->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <!-- to render the component inside thre browser-->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+     <!--compile the content return by component-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React;
+      function Counter() {
+        //destructing the array returned by useState and initializing
+        const [count, setCount] = useState(0);
+        const [value, setValue] = useState(10);
+
+        return (
+          <div>
+            <p>number incresed by 1 {count}</p>
+            {/*addining event handler to call setCount function increase state variable by 1 */}
+            <button onClick={() => setCount(count + 1)}> Increase</button>
+
+            <p>number decreased by 1{value}</p>
+            {/*addining event handler to call setValue function decrease state variable by 1 */}
+            <button onClick={() => setValue(value - 1)}> Decrease</button>
+          </div>
+        );
+      }
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Counter />);
+    </script>
+  </body>
+</html>
