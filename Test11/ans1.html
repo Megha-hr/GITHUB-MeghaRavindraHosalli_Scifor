@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ans3</title>
+  </head>
+  <body>
+    <!--WRITE A FUNCTIONAL COMPONENT THAT USES THE USESTATE HOOK TO MANAGE A PIECE OF STATE REPRESENTING A USERNAME. INCLUDE AN INPUT FIELD THAT UPDATES THIS STATE.
+-->
+    <div id="root"></div>
+    <!-- to prepare the component-->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- to render the component inside thre browser-->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!--compile the content return by component-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React;
+
+      const UserName = () => {
+        const [username, changeUsername] = useState("");
+
+        const InputChange = (event) => {
+          changeUsername(event.target.value);
+        };
+
+        return (
+          <div>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={InputChange}
+            />
+            <p>Current Username: {username}</p>
+          </div>
+        );
+      };
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<UserName />);
+    </script>
+  </body>
+</html>

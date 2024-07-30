@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- to prepare the component-->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- to render the component inside thre browser-->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!--compile the content return by component-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!--custom script-->
+    <script type="text/babel">
+      class Person extends React.Component {
+        //initialize the state object in constructor
+        constructor(props) {
+          super(props);
+          this.state = {
+            name: "abc",
+            address: "xyz",
+          };
+        }
+
+        //To change the Name from abc to Megha using setState
+        changename = () => {
+          this.setState({ name: "Megha" });
+        };
+
+        //Refer to the state object anywhere in the component by using the this.state.propertyname
+        render() {
+          return (
+            <div>
+              <h2>My name is {this.state.name}</h2>;
+              <p>My address is {this.state.address}</p>
+              <button type="button" onClick={this.changename}>
+                Change Name
+              </button>
+            </div>
+          );
+        }
+      }
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Person />);
+    </script>
+  </body>
+</html>

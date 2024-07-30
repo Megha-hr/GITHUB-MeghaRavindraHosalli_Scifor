@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch</title>
+</head>
+<body>
+    <script>
+        //creating array 
+        let array=["10",10,"megha",12.9];
+        try{
+            document.write("the elements in array are "+ array);//display elements of arrat
+            document.write("the elements in arr"+arr)//arr is undefined but still trying to fetch its value. Thus catch block will be invoked  
+        }catch(e){
+            alert(e);//Handling error
+        }
+    </script>
+</body>
+</html>

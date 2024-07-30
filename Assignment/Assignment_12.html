@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>useEffect</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- to prepare the component-->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- to render the component inside thre browser-->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!--compile the content return by component-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useRef, useEffect } = React;
+
+      //Creating focus functional component
+      const Focus = () => {
+        //create a ref for the element want to focus
+        const refElement = useRef(null);
+
+        //use useEffect to focus the element when component load
+        useEffect(() => {
+          refElement.current.focus();
+        }, []);
+        return (
+          <div>
+            {/*Attaching ref to input element*/}
+            <input type="text" palceholder="focus" ref={refElement} />
+          </div>
+        );
+      };
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Focus />);
+    </script>
+  </body>
+</html>

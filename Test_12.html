@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter using context API</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      h3 {
+        text-align: center;
+      }
+
+      button {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+      }
+      .box {
+        width: 500px;
+        height: 300px;
+        border: 1px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState, useContext, createContext } = React;
+      //create context object
+      const CounterContext = createContext();
+
+      //create component provider
+      function CounterProvider({ children }) {
+        const [count, SetCount] = useState(0);
+        //to increase count value by 1
+        const increment = () => SetCount(count + 1);
+
+        //to decrease value by 1
+        const decrement = () => SetCount(count - 1);
+        return (
+          <CounterContext.Provider value={{ count, increment, decrement }}>
+            {children}
+          </CounterContext.Provider>
+        );
+      }
+      //create consumer component
+      function CounterValueDisplay() {
+        //using useContext get the data from provider component
+        const { count, increment, decrement } = useContext(CounterContext);
+
+        return (
+          <div className="box">
+            <h1>Value of counter</h1>
+            <h2>{count}</h2>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+          </div>
+        );
+      }
+      //create top most parent component
+      function Counter() {
+        return (
+          <CounterProvider>
+            <CounterValueDisplay />
+          </CounterProvider>
+        );
+      }
+      //rendering components
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Counter />);
+    </script>
+  </body>
+</html>
