@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try Catch</title>
+</head>
+<body>
+    <script>
+//prompt to get two numbers
+    const input_1= parseInt(prompt("enter first number"));
+    const input_2= parseInt(prompt("enter second number"));
+
+    //create division function
+    function Division(input_1,input_2){
+        try{
+           if (input_2 === 0) {
+            console.log("Division by zero is not allowed.");
+            }
+
+            if (isNaN(input_1) || isNaN(input_2)) {
+           console.log("Both inputs must be integers.");
+        }
+
+       
+
+        let result =input_1/ input_2;
+        alert(`The result of dividing ${input_1} by ${input_2} is ${result}.`);
+        }
+        catch(e){
+            console.log(e);
+        }
+    }
+
+    //calling function
+    Division(input_1,input_2);
+    </script>
+
+    
+
+   </script>
+</body>
+</html>
