@@ -1,0 +1,10 @@
+REST stands for Representational State Transfer and uses HTTP protocol for implementation.
+
+these services are
+1.lightweight
+2.provide maintainability
+3.scalability
+4.supports multiple applications that are developed by different programming language
+
+They provide means of accessing resources present at server required for the client via the web browser by means of request headers, request body, response body, status codes, etc.
+REST API provides resourses at server to client via we browser by means of request body,response body,request header,status code etc.
